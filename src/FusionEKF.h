@@ -19,7 +19,7 @@ public:
   /**
   * Destructor.
   */
-  virtual ~FusionEKF();
+  virtual ~FusionEKF() {}
 
   /**
   * Run the whole flow of the Kalman Filter from here.
@@ -43,7 +43,6 @@ private:
   Eigen::MatrixXd R_laser_;
   Eigen::MatrixXd R_radar_;
   Eigen::MatrixXd H_laser_;
-  Eigen::MatrixXd Hj_;
 };
 
 #endif /* FusionEKF_H_ */
